@@ -1,38 +1,93 @@
 const lastItems = document.querySelectorAll('.button-choices ul li');
+const underlineColor = document.querySelector('.underlineColor');
+const seenBtn=document.querySelector('.section3-inner ul li')
 
 lastItems.forEach(li => {
   li.addEventListener('click', function() {
-
     lastItems.forEach(items => {
       items.classList.remove('clicked');
-     
     });
     this.classList.add('clicked');
   });
 });
+document.addEventListener("DOMContentLoaded", function() {
+  const bookmarkingDiv = document.querySelector('.bookmarking');
+  const speedsearchingDiv = document.querySelector('.speedsearching');
+  const easysharingDiv = document.querySelector('.easysharing');
+
+  const bookmarkButton = document.querySelector('.book');
+  const speedsearchingButton = document.querySelector('.speed');
+  const easysharingButton = document.querySelector('.easy');
+
+  bookmarkButton.addEventListener('click', function() {
+      bookmarkingDiv.removeAttribute('hidden');
+      speedsearchingDiv.setAttribute('hidden', true);
+      easysharingDiv.setAttribute('hidden', true);
+  });
+
+  speedsearchingButton.addEventListener('click', function() {
+    // if (seenBtn) {
+    //   underlineColor.style.marginTop="57px"
+    //   console.log("seen");
+    //   alert('dcjhdbc')
+    
+    // }
+      bookmarkingDiv.setAttribute('hidden', true);
+      speedsearchingDiv.removeAttribute('hidden');
+      easysharingDiv.setAttribute('hidden', true);
+
+
+  });
+
+  easysharingButton.addEventListener('click', function() {
+      bookmarkingDiv.setAttribute('hidden', true);
+      speedsearchingDiv.setAttribute('hidden', true);
+      easysharingDiv.removeAttribute('hidden');
+      // if (seenBtn.style.display==='block') {
+    
+      //   underlineColor.style.marginTop="115px"
+      // }
+  });
+});
+
+
 document.addEventListener('DOMContentLoaded', function() {
-    const lastItem = document.querySelectorAll('.container3-inner ul li');
-    const underlineColor = document.querySelector('.underlineColor');
- 
-    // lastItem[0].classList.add('clicked');
+  const lastItem = document.querySelectorAll('.section3-inner ul li');
+
+  function activateUnderline() {
+    const firstLi = lastItem[0]; 
+    const containerRect = firstLi.parentElement.getBoundingClientRect();
+    const rect = firstLi.getBoundingClientRect();
+    const leftPosition = rect.left - containerRect.left;
+
+    underlineColor.style.width = rect.width + 'px';
+    underlineColor.style.transform = `translateX(${leftPosition}px)`;
+  }
+
   
-    lastItem.forEach(li => {
-      li.addEventListener('click', function() {
-        lastItem.forEach(item => {
-          item.classList.remove('clicked');
-        });
-        this.classList.add('clicked');
-  
-        const containerRect = this.parentElement.getBoundingClientRect();
-        const rect = this.getBoundingClientRect();
-        const leftPosition = rect.left - containerRect.left;
-  
-        underlineColor.style.width = rect.width + 'px';
-        underlineColor.style.transform = `translateX(${leftPosition}px)`;
+  activateUnderline();
+
+  lastItem.forEach(li => {
+    li.addEventListener('click', function() {
+      lastItem.forEach(item => {
+        item.classList.remove('clicked');
       });
+      this.classList.add('clicked');
+
+      const containerRect = this.parentElement.getBoundingClientRect();
+      const rect = this.getBoundingClientRect();
+      const leftPosition = rect.left - containerRect.left;
+
+      underlineColor.style.width = rect.width + 'px';
+      underlineColor.style.transform = `translateX(${leftPosition}px)`;
     });
   });
-//           FAQ ACCORDION
+});
+
+
+
+
+
 let imgBoxes = document.querySelectorAll('.img-box img');
 let accordion = document.getElementsByClassName('accordion');
 
@@ -51,22 +106,28 @@ for (let index = 0; index < accordion.length; index++) {
 }
 const submit=document.getElementById('submit')
 const inputBox=document.querySelector('.input-box')
+const con=document.querySelector(".con")
 let invalid=document.querySelector('.invalid')
 submit.addEventListener('click',function(){
-    if (inputBox.value.includes('@gmail.com')) {
+    if (inputBox.value.includes('@gmail.com')) { 
     window.location.href='index.html'
 
       }else{
         document.querySelector('.invalid').style.display='block'
-        invalid.innerHTML='invalid details <img src="images/icon-error.svg" alt="" class="error">'
+        document.querySelector('.con').style.display='block'
+        invalid.innerHTML='<h4 class="error"><img src="images/icon-error.svg" alt=""></h4>'
+    
         inputBox.value=''
+        
         const res=setTimeout(() => {
         document.querySelector('.invalid').style.display='none'
+        document.querySelector('.con').style.display='none'
         clearTimeout(res)
         },2000);
       }
 
 })
+
 
 
 
