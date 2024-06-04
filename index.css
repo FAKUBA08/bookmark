@@ -1799,6 +1799,9 @@ left: .2%;
 top: -3rem;
 /* height: 4rem; */
 }
+.whoops{
+    font-size: 13px;
+}
 }
 .container6-text p span br {
 display: none;
