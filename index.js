@@ -108,6 +108,7 @@ const submit=document.getElementById('submit')
 const inputBox=document.querySelector('.input-box')
 const con=document.querySelector(".con")
 let invalid=document.querySelector('.invalid')
+ const container6=document.querySelector('.container6')
 submit.addEventListener('click',function(){
     if (inputBox.value.includes('@gmail.com')) { 
     window.location.href='index.html'
@@ -118,14 +119,27 @@ submit.addEventListener('click',function(){
         invalid.innerHTML='<h4 class="error"><img src="images/icon-error.svg" alt=""></h4>'
     
         inputBox.value=''
-        
+         container6.style.marginBottom='-68px'
         const res=setTimeout(() => {
         document.querySelector('.invalid').style.display='none'
         document.querySelector('.con').style.display='none'
+        container6.style.marginBottom='-15px'
         clearTimeout(res)
         },2000);
       }
 
+})
+const hambouger=document.querySelector('.hambouger')
+let hamHome=document.querySelector('.hambouger-menu')
+let hamAppearance=document.getElementById('ham-appearance')
+let cancelHome=document.querySelector('.cancel-ham')
+hambouger.addEventListener('click',function(){
+ hamHome.style.display='block'
+//  hamAppearance.style.display='none'
+ 
+})
+cancelHome.addEventListener('click',function(){
+ hamHome.style.display='none'
 })
 
 
