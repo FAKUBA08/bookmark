@@ -74,9 +74,9 @@ display: none;
 animation: animate 1s 1;
 }
 @keyframes animate {
-  0%{
-    transform: translateY(-100%);
-  }
+0%{
+transform: translateY(-100%);
+}
 }
 
 .logos{
@@ -730,7 +730,7 @@ width: 90%;
 }
 .rotate180 {
 transform: rotate(180deg);
-transition: transform 0.3s ease;
+transition: transform 0.6s ease;
 color:  #FB5758;
 }
 .more-info{
@@ -892,131 +892,131 @@ cursor: pointer;
 
 /* header & hero */
 @media only screen and (max-width:627px){
-  .underline-hams{
-    width: 40%;
-    margin: 0 auto;
-    
-    }
-    .hams-login{
-    align-items: center;
-    text-align: center;
-    padding-bottom: 3rem;
-    margin-top: 3rem;
-    }
-    .hams-login button{
-    width: 40%;
-    }
-    .cancel-ham{
-      width: 25%;
-      }
-      .cancel-ham img{
-      width: 15%;
-      }
-      .ham-logo{
-      width: 60%;
-      }
-      .twitter1 {
-        width:10%;
-      }
-      .facebook1 {
-        width:10%;
-      }
-      
+.underline-hams{
+width: 40%;
+margin: 0 auto;
 
-  }
-  @media only screen and (max-width:504px){
-    .underline-hams{
-      width: 45%;
-      margin: 0 auto;
-      
-      }
-      .hams-login button{
-      width: 45%;
-      }
-      .cancel-ham{
-        width: 25%;
-        }
-        .cancel-ham img{
-        width: 15%;
-        }
-        .ham-logo{
-        width: 67%;
-        }
-        .twitter1 {
-          width:10%;
-        }
-        .facebook1 {
-          width:10%;
-        }
-        
-  
-    }
-    @media only screen and (max-width:440px){
-      .underline-hams{
-        width: 55%;
-        margin: 0 auto;
-        
-        }
-        .hams-login button{
-        width: 55%;
-        }
-        .cancel-ham{
-          width: 25%;
-          transform: translateY(-2px);
-          }
-          .cancel-ham img{
-          width: 15%;
-          }
-          .ham-logo{
-          width: 72%;
-          }
-          .twitter1 {
-            width:10%;
-          }
-          .facebook1 {
-            width:10%;
-          }
-          
-    
-      }
-      @media only screen and (max-width:390px){
-        .underline-hams{
-          width: 55%;
-          margin: 0 auto;
-          
-          }
-          .hams-login button{
-          width: 55%;
-          }
-          .cancel-ham{
-            width: 27%;
-            transform: translateY(-3.4px);
-            }
-            .cancel-ham img{
-            width: 25%;
-            }
-            .ham-logo img{
-              width: 60%;
-     
-              }
-            .ham-logo{
-            width: 90%;
-   
-            }
-            .twitter1 {
-              width:10%;
-            }
-            .facebook1 {
-              width:10%;
-            }
-            .logos{
-              justify-content: space-between;
-              left: -6%;
-              position: relative;
-            }
-      
-        }
-  
+}
+.hams-login{
+align-items: center;
+text-align: center;
+padding-bottom: 3rem;
+margin-top: 3rem;
+}
+.hams-login button{
+width: 40%;
+}
+.cancel-ham{
+width: 25%;
+}
+.cancel-ham img{
+width: 15%;
+}
+.ham-logo{
+width: 60%;
+}
+.twitter1 {
+width:10%;
+}
+.facebook1 {
+width:10%;
+}
+
+
+}
+@media only screen and (max-width:504px){
+.underline-hams{
+width: 45%;
+margin: 0 auto;
+
+}
+.hams-login button{
+width: 45%;
+}
+.cancel-ham{
+width: 25%;
+}
+.cancel-ham img{
+width: 15%;
+}
+.ham-logo{
+width: 67%;
+}
+.twitter1 {
+width:10%;
+}
+.facebook1 {
+width:10%;
+}
+
+
+}
+@media only screen and (max-width:440px){
+.underline-hams{
+width: 55%;
+margin: 0 auto;
+
+}
+.hams-login button{
+width: 55%;
+}
+.cancel-ham{
+width: 25%;
+transform: translateY(-2px);
+}
+.cancel-ham img{
+width: 15%;
+}
+.ham-logo{
+width: 72%;
+}
+.twitter1 {
+width:10%;
+}
+.facebook1 {
+width:10%;
+}
+
+
+}
+@media only screen and (max-width:390px){
+.underline-hams{
+width: 55%;
+margin: 0 auto;
+
+}
+.hams-login button{
+width: 55%;
+}
+.cancel-ham{
+width: 27%;
+transform: translateY(-3.4px);
+}
+.cancel-ham img{
+width: 25%;
+}
+.ham-logo img{
+width: 60%;
+
+}
+.ham-logo{
+width: 90%;
+
+}
+.twitter1 {
+width:10%;
+}
+.facebook1 {
+width:10%;
+}
+.logos{
+justify-content: space-between;
+left: -6%;
+position: relative;
+}
+
+}
+
 
 @media only screen and (max-width:1312px){
 .hero-text p span{
@@ -1081,7 +1081,9 @@ transform: translateY(8rem);
 }
 .hero-page-inner{
 flex-direction: column-reverse;
+
 }
+
 /* nav ul {
 flex-wrap: wrap;
 } */
@@ -1147,10 +1149,14 @@ display: none;
 display: block;
 }
 }
+.hambouger-menu{
+    display: none;
+}
 @media only screen and (max-width:623px){
 nav ul{
 display: none;
 }
+
 .hero-text p span{
 font-size: 22px;
 }
