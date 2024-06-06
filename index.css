@@ -148,6 +148,9 @@ font-size: 20px;
 letter-spacing: 2px;
 padding: 1rem 0;
 }
+.hams-menu ul li:hover{
+color: #FB5859;
+}
 .underline-hams{
 height: 1px;
 background-color: #f7f7f757;
@@ -900,7 +903,7 @@ margin: 0 auto;
 .hams-login{
 align-items: center;
 text-align: center;
-padding-bottom: 3rem;
+padding-bottom: rem;
 margin-top: 3rem;
 }
 .hams-login button{
@@ -921,7 +924,10 @@ width:10%;
 .facebook1 {
 width:10%;
 }
-
+.hams-footer{
+top: -7rem;
+position: relative;
+}
 
 }
 @media only screen and (max-width:504px){
@@ -1014,8 +1020,10 @@ justify-content: space-between;
 left: -6%;
 position: relative;
 }
+.hams-login{
+padding-bottom: 12rem;
 
-}
+}}
 
 
 @media only screen and (max-width:1312px){
@@ -1150,7 +1158,7 @@ display: block;
 }
 }
 .hambouger-menu{
-    display: none;
+display: none;
 }
 @media only screen and (max-width:623px){
 nav ul{
